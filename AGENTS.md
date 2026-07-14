@@ -19,6 +19,23 @@ If `pig` cli is available, you can use it to perform operation command with caut
 
 ---
 
+## Git Workflow / Git 工作流
+
+When updating this fork, synchronize in this order using freshly fetched refs:
+`pgsty/pigsty` `main` → `yalotein/pigsty` `main` → feature branch (for example,
+`franky`). Work from a clean worktree. Fast-forward the fork `main` first, then
+rebase the feature branch and resolve conflicts without overwriting upstream
+changes. Use `git push --force-with-lease` only for an authorized rebased feature
+branch; never force-push either `main` branch.
+
+更新此 fork 时，必须使用刚获取的 ref，并按以下顺序同步：`pgsty/pigsty` `main` →
+`yalotein/pigsty` `main` → feature branch（例如 `franky`）。必须从干净的 worktree
+操作。先 fast-forward fork `main`，再 rebase feature branch，并在不覆盖 upstream 变更的
+前提下解决冲突。只有获得授权的 rebase feature branch 才能使用
+`git push --force-with-lease`；不得 force-push 任一 `main` 分支。
+
+---
+
 ## Standard Operating Procedures
 
 ### Before Any Change
